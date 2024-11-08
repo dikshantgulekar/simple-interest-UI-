@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+    <div class="container1">
+        <div class="values">
+            <h4>SIMPLE INTEREST</h4>
+            <h2>CALCULATOR</h2>
+            
+            <form id="interestForm">
+                <div class="form-group">
+                    <label for="principal">Principal Amount (Rs.)</label>
+                    <div class="input-group">
+                        <span>₹</span>
+                        <input type="number" id="principal" placeholder="10000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rate">Annual Rate</label>
+                    <div class="input-group">
+                        <input type="number" id="rate" placeholder="10" required>
+                        <span>%</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="period-value">Period (Years)</label>
+                    <div class="input-group">
+                        <input type="number" id="period-value" placeholder="1" required>
+                    </div>
+                </div>
+
+                <button type="button" onclick="calculateInterest()">Calculate</button>
+            </form>
+        </div>
+
+        <div class="output">
+            <div class="graph" id="graph">
+                <figure class="highcharts-figure">
+                    <div id="container"></div>
+                </figure>
+            </div>
+            <div class="answers" id="answers">
+                <p id="amount"></p>
+                <p id="interest"></p>
+                <p id="finalAmount"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
